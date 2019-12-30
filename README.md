@@ -12,6 +12,6 @@
    destination_station varchar2(50) unique,
    class varchar2(50),
    constraint train_num_pk primary key(train_num),
-   constraint class_ck check(class in ('non-ac-sleeper','non-ac-seater','ac-sleeper','ac-seater'))
+   constraint class_ck check(class in ('non-ac-sleeper','non-ac-seater','ac-sleeper','ac-seater')),
    constraint source_dest_ck check(source_station<>destination_station));
    ```
