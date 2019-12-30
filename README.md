@@ -7,7 +7,7 @@
 ```sql
    create table train_lists(
    train_num number ,
-   train_name varchar2(50) unique,
+   train_name varchar2(50) not null unique,
    source_station varchar2(50) unique,
    destination_station varchar2(50) unique,
    class varchar2(50),
