@@ -8,3 +8,11 @@
 | 2    | 321       | sahapthi express | covai          | madurai             | non-ac-sleeper |
 | 3    | 467       | dindugal express | chengalpattu   | chennai             | ac-sleeper     |
 | 4    | 426       | covai express    | chennai        | covai               | ac-sleeper     |
+
+### Feature 2: passenger details
+| s.no | train_num | p_name   | p_age | p_gender | p_contact  |
+|------|-----------|----------|-------|----------|------------|
+| 1    | 123       | Aravinth | 33    | M        | 8531946805 |
+| 2    | 321       | sahana   | 19    | F        | 9876543210 |
+| 3    | 123       | praveen  | 60    | M        | 8765432190 |
+| 4    | 426       | amrish   | 45    | M        | 7890654673 
