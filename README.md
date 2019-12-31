@@ -24,7 +24,7 @@
    (467,'dindugal express','chengalpattu','chennai','ac-seater');
    insert into  train_lists(train_num,train_name,source_station,destination_station,class)value
    (426,'covai express','chennai','covai','ac-seater');   
-   
+```   
 | s.no | train_num | train_name       | source_station | destination_station | class          |
 |------|-----------|------------------|----------------|---------------------|----------------|
 | 1    | 123       | indian express   | chennai        | covai               | ac-sleeper     |
