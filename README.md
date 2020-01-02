@@ -145,4 +145,7 @@ select * from passenger_details where p_gender='F';
 ```
 ------------------------------------------------------------------------------
 
-select * from passenger_details where p_age>=60;
+### inner join query
+```sql
+select p.p_name,p.p_id,l.train_name,source_station,destination_station,p_gender from train_lists l,passenger_details p where l.train_num=p.train_num;
+```
