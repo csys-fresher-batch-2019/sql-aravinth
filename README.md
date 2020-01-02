@@ -107,3 +107,38 @@
 | 2    | 1021 | 05-01-2020 12:00:00 AM | 07-01-2020 11:00:00AM  | 1      |
 | 3    | 1022 | 06-01-2020 11:00:00 PM | 06-01-2020 06:00:00 AM | 1      |
 | 4    | 1023 | 05-01-2020 03:00:00 AM | 06-01-2020 05:00:00 PM | 0      |
+
+
+ ---scenerioo---
+   ### Admin update--
+   ---train_lists--
+   ```sql
+    select* from train_lists;
+    
+    select* from train_lists where source_station='chennai' and destination_station = 'covai'; 
+    ### Passenger details--
+     select * from passenger_details p,train_lists t where p.train_num = p.train_num and source_station='chennai' and         destination_station = 'covai';
+     
+     
+   ### to check the remaining tickets----  
+  CREATE OR REPLACE FUNCTION SEATS_AVAILABILITY(i_train_num IN number)
+RETURN NUMBER AS 
+remaining_seats number;
+booked_seats number;
+maximum_seats number;
+BEGIN
+select no_of_seats_available into maximum_seats from seat_availabilities where train_num=i_train_num;
+select sum(no_of_tickets) into booked_seats from passenger_details where train_num=i_train_num;
+remaining_seats := maximum_seats - booked_seats;
+  RETURN remaining_seats;
+END SEATS_AVAILABILITY;
+select SEATS_AVAILABILITY(323)from dual;
+```
+-----------------------------------------------------------------------------
+### male passenger----
+select * from passenger_details where p_gender='M';
+### Female passenger----
+select * from passenger_details where p_gender='F';
+------------------------------------------------------------------------------
+
+select * from passenger_details where p_age>=60;
