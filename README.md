@@ -33,6 +33,7 @@
 | 4    | 426       | covai express    | chennai        | covai               | ac-sleeper     |
 
 ## Feature 2: Passanger information
+```sql
    create table passenger_details(
    train_num number,
    p_name varchar2(50) not null,
