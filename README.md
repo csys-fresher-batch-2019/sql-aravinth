@@ -82,3 +82,25 @@
 | 2    | 321       | 500             | 10              |
 | 3    | 467       | 450             | 40              |
 | 4    | 426       | 250             | 25              |
+## Feature 4: Train timings
+```sql
+   create table train_timings(
+   p_id number,
+   departure_time timestamp not null,
+   arrival_time timestamp not null,
+   constraints p_id_fk foreign key(p_id) references passenger_details(p_id));
+   insert into train_timings(p_id,departure_time,arrival_time) values(1020,to_date('05-01-2020 10:00:00AM','dd-mm-yyyy hh:mi:ssPM'),
+   to_date('06-01-2020 12:00:00PM','dd-mm-yyyy hh:mi:ssAM'));
+   insert into train_timings(p_id,departure_time,arrival_time) values(1021,to_date('05-01-2020 12:00:00AM','dd-mm-yyyy hh:mi:ssAM'),
+   to_date('07-01-2020 11:00:00AM','dd-mm-yyyy hh:mi:ssPM'));
+   insert into train_timings(p_id,departure_time,arrival_time) values(1022,to_date('06-01-2020 11:00:00PM','dd-mm-yyyy hh:mi:ssPM'),
+   to_date('06-01-2020 06:00:00AM','dd-mm-yyyy hh:mi:ssAM'));
+   insert into train_timings(p_id,departure_time,arrival_time) values(1023,to_date('05-01-2020 03:00:00AM','dd-mm-yyyy hh:mi:ssAM'),
+   to_date('06-01-2020 05:00:00PM','dd-mm-yyyy hh:mi:ssPM'));
+   alter table train_timings add booked number default 0;
+   update train_timings set booked = 1 where p_id = 1020;
+   update train_timings set booked = 1 where p_id = 1021;
+   update train_timings set booked = 1 where p_id = 1022;
+   update train_timings set booked = 1 where p_id = 1023;
+   select *from train_timings;
+```
