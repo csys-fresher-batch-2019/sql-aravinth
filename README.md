@@ -31,4 +31,26 @@
 | 2    | 321       | sahapthi express | covai          | madurai             | non-ac-sleeper |
 | 3    | 467       | dindugal express | chengalpattu   | chennai             | ac-sleeper     |
 | 4    | 426       | covai express    | chennai        | covai               | ac-sleeper     |
-```
+
+## Feature 2: Passanger information
+   create table passenger_details(
+   train_num number,
+   p_name varchar2(50) not null,
+   p_id number,
+   p_age number not null,
+   p_gender char(1) not null,
+   p_contact number(10) not null,
+   constraints train_num_fk foreign key(train_num) references train_lists(train_num),
+   constraints p_id primary key(p_id),
+   constraints p_age_ck check(p_age>=1),
+   constraints p_gender_ck check(p_gender in('M','F','O')),
+   constraints p_contact_ck check(p_contact>999999999));
+   create sequence p_id
+   start with 1000
+   increment by 1
+   insert into passenger_details(train_num,p_name,p_id,p_age,p_gender,p_contact) values (123,'Aravinth',p_id.nextval,33,'M',8531946805);
+   insert into passenger_details(train_num,p_name,p_id,p_age,p_gender,p_contact) values (321,'sahana',p_id.nextval,19,'F',9876543210);
+   insert into passenger_details(train_num,p_name,p_id,p_age,p_gender,p_contact) values (123,'praveen',p_id.nextval,60,'M',8765432190);
+   insert into passenger_details(train_num,p_name,p_id,p_age,p_gender,p_contact) values (426,'amrish',p_id.nextval,45,'M',7890654673);
+   select * from passenger_details where train_num = 123;
+```   
