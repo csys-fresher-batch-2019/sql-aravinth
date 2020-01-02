@@ -71,7 +71,7 @@
    tot_no_of_seats number not null,
    no_of_seats_available number not null,
    constraints train_num_fk1 foreign key(train_num) references train_lists (train_num));
-    insert into seat_availabilities(train_num,tot_no_of_seats,no_of_seats_available) values(123,200,50);
+   insert into seat_availabilities(train_num,tot_no_of_seats,no_of_seats_available) values(123,200,50);
    insert into seat_availabilities(train_num, tot_no_of_seats, no_of_seats_available) values(123,500,10);
    insert into seat_availabilities( train_num, tot_no_of_seats, no_of_seats_available) values( 467,450,50);
    insert into seat_availabilities( train_num, tot_no_of_seats, no_of_seats_available) values( 426,250,25);
