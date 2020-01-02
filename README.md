@@ -15,13 +15,13 @@
    constraint source_dest_ck check(source_station<>destination_station));
    
    insert into  train_lists(train_num,train_name,source_station,destination_station,class)values
-   (123,'indian express','chennai','covai','sleeper');
+   (123,'indian express','chennai','covai');
    insert into  train_lists(train_num,train_name,source_station,destination_station,class)values
-   (321,'sahapthi express','covai','madurai','non-ac-sleeper');
+   (321,'sahapthi express','covai','madurai');
    insert into  train_lists(train_num,train_name,source_station,destination_station,class)value
-   (467,'dindugal express','chengalpattu','chennai','ac-seater');
+   (467,'dindugal express','chengalpattu','chennai');
    insert into  train_lists(train_num,train_name,source_station,destination_station,class)value
-   (426,'covai express','chennai','covai','ac-seater');   
+   (426,'covai express','chennai','covai');   
 ```   
 | s.no | train_num | train_name       | source_station | destination_station |
 |------|-----------|------------------|----------------|---------------------|
@@ -95,18 +95,19 @@
    to_date('06-01-2020 06:00:00AM','dd-mm-yyyy hh:mi:ssAM'));
    insert into train_timings(p_id,departure_time,arrival_time) values(1023,to_date('05-01-2020 03:00:00AM','dd-mm-yyyy hh:mi:ssAM'),
    to_date('06-01-2020 05:00:00PM','dd-mm-yyyy hh:mi:ssPM'));
-   alter table train_timings add booked number default 0;
-   update train_timings set booked = 1 where p_id = 1020;
-   update train_timings set booked = 1 where p_id = 1021;
-   update train_timings set booked = 1 where p_id = 1022;
+   alter table train_timings add booked varchar2(10);
+   update train_timings set booked = 'reserved' where p_id = 1020;
+   update train_timings set booked = 'reserved' where p_id = 1021;
+   update train_timings set booked = 'reserved' where p_id = 1022;
+   update train_timings set booked ='cancelled' where p_id = 1023;
    select *from train_timings;
 ```
-| s.no | p_id | departure time         | arrival time           | booked |
-|------|------|------------------------|------------------------|--------|
-| 1    | 1020 | 05-01-2020 10:00:00 AM | 06-01-2020 12:00:00PM  | 1      |
-| 2    | 1021 | 05-01-2020 12:00:00 AM | 07-01-2020 11:00:00AM  | 1      |
-| 3    | 1022 | 06-01-2020 11:00:00 PM | 06-01-2020 06:00:00 AM | 1      |
-| 4    | 1023 | 05-01-2020 03:00:00 AM | 06-01-2020 05:00:00 PM | 0      |
+| s.no | p_id | departure time         | arrival time           | booked      |
+|------|------|------------------------|------------------------|-------------|
+| 1    | 1020 | 05-01-2020 10:00:00 AM | 06-01-2020 12:00:00PM  | reserved    |
+| 2    | 1021 | 05-01-2020 12:00:00 AM | 07-01-2020 11:00:00AM  | reserved    |
+| 3    | 1022 | 06-01-2020 11:00:00 PM | 06-01-2020 06:00:00 AM | reserved    |
+| 4    | 1023 | 05-01-2020 03:00:00 AM | 06-01-2020 05:00:00 PM | cancelled   |
 
 
  ---scenerioo---
