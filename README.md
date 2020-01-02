@@ -138,9 +138,11 @@ select SEATS_AVAILABILITY(323)from dual;
 ```
 -----------------------------------------------------------------------------
 ### male passenger----
+```sql
 select * from passenger_details where p_gender='M';
 ### Female passenger----
 select * from passenger_details where p_gender='F';
+```
 ------------------------------------------------------------------------------
 
 select * from passenger_details where p_age>=60;
