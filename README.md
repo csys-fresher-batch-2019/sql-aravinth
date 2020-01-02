@@ -63,3 +63,12 @@
 | 2    | 321       | sahana   | 1001 | 6              | 19    | F        | 9876543210 |
 | 3    | 123       | praveen  | 1002 | 7              | 60    | M        | 8765432190 |
 | 4    | 426       | amrish   | 1003 | 34             | 45    | M        | 7890654673 |
+
+## Feature 3: Seat Availabilities
+```sql
+ create table seat_availabilities(
+   train_num number,
+   tot_no_of_seats number not null,
+   no_of_seats_available number not null,
+   constraints train_num_fk1 foreign key(train_num) references train_lists (train_num));
+```   
