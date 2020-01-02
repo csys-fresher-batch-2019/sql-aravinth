@@ -116,6 +116,7 @@
     select* from train_lists;
     
     select* from train_lists where source_station='chennai' and destination_station = 'covai'; 
+   ```
     ### Passenger details
      select * from passenger_details p,train_lists t where p.train_num = p.train_num and source_station='chennai' and     destination_station = 'covai';
      
