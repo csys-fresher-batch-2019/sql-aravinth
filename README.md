@@ -72,3 +72,9 @@
    no_of_seats_available number not null,
    constraints train_num_fk1 foreign key(train_num) references train_lists (train_num));
 ```   
+| s.no | train.num | tot.no.of.seats | available.seats |
+|------|-----------|-----------------|-----------------|
+| 1    | 123       | 200             | 50              |
+| 2    | 321       | 500             | 10              |
+| 3    | 467       | 450             | 40              |
+| 4    | 426       | 250             | 25              |
