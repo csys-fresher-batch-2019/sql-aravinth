@@ -149,3 +149,8 @@ select * from passenger_details where p_gender='F';
 ```sql
 select p.p_name,p.p_id,l.train_name,source_station,destination_station,p_gender from train_lists l,passenger_details p where l.train_num=p.train_num;
 ```
+### outer join query
+```sql
+select * from train_lists l left outer join passenger_details p on l.train_num=p.train_num;
+select * from train_lists l right outer join passenger_details p on l.train_num=p.train_num;
+```
