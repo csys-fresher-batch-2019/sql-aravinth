@@ -10,12 +10,12 @@
 | 4    | 426       | covai express    | chennai        | covai               | ac-sleeper     |
 
 ### Feature 2: passenger details
-| s.no | train_num | p_name   | p_age | p_gender | p_contact  |
-|------|-----------|----------|-------|----------|------------|
-| 1    | 123       | Aravinth | 33    | M        | 8531946805 |
-| 2    | 321       | sahana   | 19    | F        | 9876543210 |
-| 3    | 123       | praveen  | 60    | M        | 8765432190 |
-| 4    | 426       | amrish   | 45    | M        | 7890654673 
+| s.no | train_num | p_nmae   | p_id | n0.of.tickets  | p_age | p_gender | p_contact  |
+|------|-----------|----------|------|----------------|-------|----------|------------|
+| 1    | 123       | Aravinth | 1000 | 5              | 33    | M        | 8531946805 |
+| 2    | 321       | sahana   | 1001 | 6              | 19    | F        | 9876543210 |
+| 3    | 123       | praveen  | 1002 | 7              | 60    | M        | 8765432190 |
+| 4    | 426       | amrish   | 1003 | 34             | 45    | M        | 7890654673 |
 ### Feature 3: Train Timings
 | s.no | train_num | departure_tym | arrival_tym |
 |------|-----------|---------------|-------------|
