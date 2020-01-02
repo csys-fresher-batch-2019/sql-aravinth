@@ -101,7 +101,6 @@
    update train_timings set booked = 1 where p_id = 1020;
    update train_timings set booked = 1 where p_id = 1021;
    update train_timings set booked = 1 where p_id = 1022;
-   update train_timings set booked = 1 where p_id = 1023;
    select *from train_timings;
 ```
 | s.no | p_id | departure time         | arrival time           | booked |
@@ -109,4 +108,4 @@
 | 1    | 1020 | 05-01-2020 10:00:00 AM | 06-01-2020 12:00:00PM  | 1      |
 | 2    | 1021 | 05-01-2020 12:00:00 AM | 07-01-2020 11:00:00AM  | 1      |
 | 3    | 1022 | 06-01-2020 11:00:00 PM | 06-01-2020 06:00:00 AM | 1      |
-| 4    | 1023 | 05-01-2020 03:00:00 AM | 06-01-2020 05:00:00 PM | 1      |
+| 4    | 1023 | 05-01-2020 03:00:00 AM | 06-01-2020 05:00:00 PM | 0      |
