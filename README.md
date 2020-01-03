@@ -121,7 +121,7 @@
     ### Passenger_details----
     ```sql
      select * from passenger_details p,train_lists t where p.train_num = p.train_num and source_station='chennai' and     destination_station = 'covai';
-    ``` 
+     
     ### male passenger----
 ```sql
 select * from passenger_details where p_gender='M';
