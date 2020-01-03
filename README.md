@@ -165,3 +165,7 @@ select * from train_lists l right outer join passenger_details p on l.train_num=
 ```sql
 select * from passenger_details where P_age>=60;
 ```
+### seats updation---
+```sql
+update seat_availabilities set no_tickets=60 where train_num = 123;
+```
