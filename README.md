@@ -122,27 +122,7 @@
     ```sql
      select * from passenger_details p,train_lists t where p.train_num = p.train_num and source_station='chennai' and     destination_station = 'covai';
      
-    ### male passenger----
-```sql
-select * from passenger_details where p_gender='M';
-### Female passenger----
-select * from passenger_details where p_gender='F';
-```
-------------------------------------------------------------------------------
 
-### inner join query
-```sql
-select p.p_name,p.p_id,l.train_name,source_station,destination_station,p_gender from train_lists l,passenger_details p where l.train_num=p.train_num;
-```
-### outer join query
-```sql
-select * from train_lists l left outer join passenger_details p on l.train_num=p.train_num;
-select * from train_lists l right outer join passenger_details p on l.train_num=p.train_num;
-```
-### update train_lists
-```sql
- insert into  train_lists(train_num,train_name,source_station,destination_station,class)values
-   (146,'andhara express','vaishak','delhi');
 ```   
 
    ### to check the remaining tickets----  
