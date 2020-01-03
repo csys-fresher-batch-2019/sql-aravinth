@@ -155,3 +155,8 @@ select p.p_name,p.p_id,l.train_name,source_station,destination_station,p_gender 
 select * from train_lists l left outer join passenger_details p on l.train_num=p.train_num;
 select * from train_lists l right outer join passenger_details p on l.train_num=p.train_num;
 ```
+### update train_lists
+```sql
+ insert into  train_lists(train_num,train_name,source_station,destination_station,class)values
+   (146,'andhara express','vaishak','delhi');
+```   
