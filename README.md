@@ -171,7 +171,7 @@ update seat_availabilities set no_tickets=60 where train_num = 123;
 ```
 ### number of trains---
 ```sql
-select count(*) train_num from train_list;
+select count(*) train_num from train_list and from source_station = 'chennai';
 ```
 ### number of passengers---
 ```sql
