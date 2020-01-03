@@ -147,11 +147,11 @@ select * from passenger_details where p_gender='F';
 ```
 ------------------------------------------------------------------------------
 
-### inner join query
+### inner join query for list of tickets---
 ```sql
 select p.p_name,p.p_id,l.train_name,source_station,destination_station,p_gender from train_lists l,passenger_details p where l.train_num=p.train_num;
 ```
-### outer join query
+### outer join query for list of non booked trains
 ```sql
 select * from train_lists l left outer join passenger_details p on l.train_num=p.train_num;
 select * from train_lists l right outer join passenger_details p on l.train_num=p.train_num;
@@ -161,3 +161,7 @@ select * from train_lists l right outer join passenger_details p on l.train_num=
  insert into  train_lists(train_num,train_name,source_station,destination_station,class)values
    (146,'andhara express','vaishak','delhi');
 ```   
+### if passenger age greater than 60---
+```sql
+select * from passenger_details where P_age>=60;
+```
