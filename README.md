@@ -19,12 +19,11 @@ constraints gender_ck check(gender in('M','F','O')),
 constraints p_contact_ck check(contact_number>999999999));
   
 ```   
-| s.no | train_num | train_name       | source_station | destination_station |
-|------|-----------|------------------|----------------|---------------------|
-| 1    | 123       | indian express   | chennai        | covai               |
-| 2    | 321       | sahapthi express | covai          | madurai             |
-| 3    | 467       | dindugal express | chengalpattu   | chennai             |
-| 4    | 426       | covai express    | chennai        | covai               |
+| S.no | USER_ID | USER_PASSWORD | GENDER | DOB        | CONTACT_NUMBER | MAIL_ID               |
+|------|---------|---------------|--------|------------|----------------|-----------------------|
+| 1    | 1000    | 2000          | M      | 01-10-1999 | 9842231946     | aravinth@gmail.com    |
+| 2    | 1020    | 1234          | M      | 31-05-1999 | 8787877872     | praveen@gmail.com     |
+| 3    | 1080    | sincostan     | M      | 13-04-1999 | 6379152730     | dharunks001@gmail.com |
 
 ## Feature 1: User Id Sequence
 
