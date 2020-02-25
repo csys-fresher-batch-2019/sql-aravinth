@@ -121,3 +121,8 @@ create table payment_status(
    constraints booking_id_fk foreign key(booking_id) references passenger_details(booking_id),
    constraints tot_ticket_price_ck check(tot_ticket_price>0));
 ```
+| S.no | TRAIN_NUM | USER_ID | BOOKING_ID | TOT_TICKET_PRICE | PAY_STATUS | PAYMENT_MODE |
+|------|-----------|---------|------------|------------------|------------|--------------|
+| 1    | 123       | 1000    | 2000       | 200              | paid       | creditcard   |
+| 2    | 123       | 1001    | 2001       | 400              | paid       | creditcard   |
+| 3    | 321       | 1002    | 2002       | 300              | paid       | creditcard   |
