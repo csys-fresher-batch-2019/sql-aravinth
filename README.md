@@ -51,12 +51,11 @@ increment by 1;
    insert into  train_lists values(427,'nilgiri express','chennai','covai',300,date '2020-01-27','21:30 to 04:30');
    insert into  train_lists values(597,'american express','chennai','theni',300,date '2020-01-27','21:30 to 04:30');
 ```   
-| s.no | train_num | p_nmae   | p_id | n0.of.tickets  | p_age | p_gender | p_contact  |
-|------|-----------|----------|------|----------------|-------|----------|------------|
-| 1    | 123       | Aravinth | 1000 | 5              | 33    | M        | 8531946805 |
-| 2    | 321       | sahana   | 1001 | 6              | 19    | F        | 9876543210 |
-| 3    | 123       | praveen  | 1002 | 7              | 60    | M        | 8765432190 |
-| 4    | 426       | amrish   | 1003 | 34             | 45    | M        | 7890654673 |
+| S.no | TRAIN_NUM | TRAIN_NAME        | SOURCE_STATION | DESTINATION_STATION | TICKET_PRICE | JOURNEY_DATE | TRAVELLING_TIME |
+|------|-----------|-------------------|----------------|---------------------|--------------|--------------|-----------------|
+| 1    | 123       | indian express    | chennai        | covai               | 200          | 26-01-2020   | 8:00 to 20:00   |
+| 2    | 321       | covai express     | chennai        | covai               | 250          | 26-01-2020   | 10:00 to 22:30  |
+| 3    | 426       | sathapthi express | chennai        | madurai             | 300          | 26-01-2020   | 21:30 to 04:30  |
 
 ## Feature 4: Seat Availabilities
 ```sql
