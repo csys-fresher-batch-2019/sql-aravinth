@@ -92,12 +92,12 @@ create table passenger_details(
    );
  
 ```
-| s.no | p_id | departure time         | arrival time           | booked      |
-|------|------|------------------------|------------------------|-------------|
-| 1    | 1020 | 05-01-2020 10:00:00 AM | 06-01-2020 12:00:00PM  | reserved    |
-| 2    | 1021 | 05-01-2020 12:00:00 AM | 07-01-2020 11:00:00AM  | reserved    |
-| 3    | 1022 | 06-01-2020 11:00:00 PM | 06-01-2020 06:00:00 AM | reserved    |
-| 4    | 1023 | 05-01-2020 03:00:00 AM | 06-01-2020 05:00:00 PM | cancelled   |
+| S.no | TRAIN_NUM | USER_ID | BOOKING_ID | PASSENGER_NAME | PHONE_NUMBER | NO_OF_TICKETS | BOOK_STATUS |
+|------|-----------|---------|------------|----------------|--------------|---------------|-------------|
+| 1    | 123       | 1000    | 2000       | Aravinth       | 9842231946   | 1             | booked      |
+| 2    | 123       | 1001    | 2001       | Dharun         | 6379152730   | 2             | booked      |
+| 3    | 321       | 1002    | 2002       | Dinesh         | 8756445621   | 1             | booked      |
+
 
 ## Feature 6:  Booking Id Sequence
 ```sql
